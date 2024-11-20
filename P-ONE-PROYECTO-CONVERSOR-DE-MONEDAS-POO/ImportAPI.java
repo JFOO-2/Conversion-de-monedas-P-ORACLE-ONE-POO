@@ -9,6 +9,7 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class ImportAPI {
 
+
     DatosRequeridosApi conversor (String divisa, String divisaConvertir, double DineroAConvertir) throws IOException, InterruptedException {
 
         String urlApi = "https://v6.exchangerate-api.com/v6/92e3a1c050624b43759343a0/pair/"+divisa+"/"+divisaConvertir+"/"+DineroAConvertir;
@@ -31,8 +32,10 @@ public class ImportAPI {
         return new Gson().fromJson(response.body(), DatosRequeridosApi.class);
 
 
+
               
     }
+
 
     //Estas importaciones incluyen las clases necesarias para manejar solicitudes HTTP y para deserializar JSON usando la biblioteca Gson.
 
