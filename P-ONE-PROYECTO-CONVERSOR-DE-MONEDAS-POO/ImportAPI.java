@@ -12,28 +12,29 @@ public class ImportAPI {
 
     DatosRequeridosApi conversor (String divisa, String divisaConvertir, double DineroAConvertir) throws IOException, InterruptedException {
 
-        String urlApi = "https://v6.exchangerate-api.com/v6/92e3a1c050624b43759343a0/pair/"+divisa+"/"+divisaConvertir+"/"+DineroAConvertir;
 
-        // Class HttpRequest
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-              .uri(URI.create(urlApi)) // implementacion de API
-              .build();
+            String urlApi = "https://v6.exchangerate-api.com/v6/92e3a1c050624b43759343a0/pair/" + divisa + "/" + divisaConvertir + "/" + DineroAConvertir;
 
-              // Interface HttpResponse<T>
+            // Class HttpRequest
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(urlApi)) // implementacion de API
+                    .build();
 
-              HttpResponse<String> response = client
-              .send(request, BodyHandlers.ofString()); 
+            // Interface HttpResponse<T>
 
-
-             // String json = response.body();
-              //System.out.println(json);
-
-        return new Gson().fromJson(response.body(), DatosRequeridosApi.class);
+            HttpResponse<String> response = client
+                    .send(request, BodyHandlers.ofString());
 
 
+            // String json = response.body();
+            //System.out.println(json);
 
-              
+
+            return new Gson().fromJson(response.body(), DatosRequeridosApi.class);
+
+
+
     }
 
 
