@@ -12,9 +12,9 @@ public class DatosInUsuario {
 public  void datosEntradaUsuario(){
     try {
         System.out.println("Ingresa la divisa origen:");
-        setDivisa(t.next());
+        setDivisa(t.nextLine());
         System.out.println("Ingresa la divisa destino: ");
-        setDivisaAConvertir(t.next());
+        setDivisaAConvertir(t.nextLine());
         System.out.println("Ingresa la cantidad a convertr: ");
         setValorAConvertir(t.nextDouble());
     } catch (Exception e) {
