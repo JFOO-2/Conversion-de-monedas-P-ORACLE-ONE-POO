@@ -12,13 +12,13 @@ public class DatosInUsuario {
 public  void datosEntradaUsuario(){
     try {
         System.out.println("Ingresa la divisa origen:");
-        setDivisa(t.nextLine());
+        setDivisa(t.next());
         System.out.println("Ingresa la divisa destino: ");
-        setDivisaAConvertir(t.nextLine());
+        setDivisaAConvertir(t.next());
         System.out.println("Ingresa la cantidad a convertr: ");
         setValorAConvertir(t.nextDouble());
     } catch (Exception e) {
-        System.out.println("Ocurrio un error");
+        System.out.println("Ocurrio un error, vuelva a intentar");
     }
 
 }
